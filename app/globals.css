@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+
+  /* Light mode */
+  --bg-primary: #faf8f5;
+  --bg-secondary: #f0ebe3;
+  --text-primary: #1a1410;
+  --text-secondary: #4a3f35;
+  --text-muted: #8b7d70;
+  --border: rgba(139, 111, 87, 0.2);
+  --accent: #ea580c;
+  --accent-soft: rgba(234, 88, 12, 0.1);
+  --glass-bg: rgba(250, 248, 245, 0.7);
+  --glass-border: rgba(139, 111, 87, 0.15);
+  --shadow: 0 4px 24px rgba(26, 20, 16, 0.08);
+  --shadow-lg: 0 8px 48px rgba(26, 20, 16, 0.12);
+}
+
+.dark {
+  --bg-primary: #0d0b09;
+  --bg-secondary: #1a1410;
+  --text-primary: #f5f0ea;
+  --text-secondary: #c4b5a5;
+  --text-muted: #7a6d62;
+  --border: rgba(196, 181, 165, 0.12);
+  --accent: #f97316;
+  --accent-soft: rgba(249, 115, 22, 0.12);
+  --glass-bg: rgba(26, 20, 16, 0.6);
+  --glass-border: rgba(196, 181, 165, 0.1);
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 48px rgba(0, 0, 0, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: white;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-secondary); }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
+
+@layer utilities {
+  .font-display { font-family: var(--font-display); }
+  .font-mono { font-family: var(--font-mono); }
+
+  .text-primary { color: var(--text-primary); }
+  .text-secondary { color: var(--text-secondary); }
+  .text-muted { color: var(--text-muted); }
+
+  .bg-surface { background-color: var(--bg-primary); }
+  .bg-surface-2 { background-color: var(--bg-secondary); }
+  .border-subtle { border-color: var(--border); }
+
+  .glass {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .shadow-custom { box-shadow: var(--shadow); }
+  .shadow-custom-lg { box-shadow: var(--shadow-lg); }
+
+  .accent-gradient {
+    background: linear-gradient(135deg, var(--accent) 0%, #c2410c 100%);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, var(--accent) 0%, #c2410c 60%, #9a3412 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .noise-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+}
+
+/* Timeline styles */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--accent), transparent);
+  transform: translateX(-50%);
+}
+
+/* Skill bar animation */
+@keyframes skillFill {
+  from { width: 0; }
+  to { width: var(--skill-width); }
+}
+
+/* Section fade */
+.section-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.section-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -50,7 +50,7 @@ export default function About() {
             <div>
               <motion.div variants={itemVariants} className="space-y-4 text-secondary leading-relaxed mb-8">
               <p className="text-lg">
-                I'm a Full Stack Developer with a strong focus on building 
+                I&apos;m a Full Stack Developer with a strong focus on building 
                 <strong className="text-primary"> scalable and high-performance back-end systems</strong>. 
                 I enjoy creating web applications that are reliable, efficient, and designed to grow with user needs.
               </p>

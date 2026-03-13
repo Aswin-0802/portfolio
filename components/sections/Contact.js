@@ -65,7 +65,7 @@ export default function Contact() {
         >
           <span className="font-mono text-sm text-[var(--accent)] mb-2 block">05. contact</span>
           <h2 className="font-display text-4xl sm:text-5xl font-black text-primary">
-            Let's work<br />
+            Let&apos;s work<br />
             <em className="not-italic text-gradient">together</em>
           </h2>
         </motion.div>
@@ -80,7 +80,7 @@ export default function Contact() {
           >
             <p className="text-secondary leading-relaxed mb-8">
               Have a project in mind? Looking for a developer to join your team? Or just want to say hello? 
-              My inbox is always open — I'll get back to you within 24 hours.
+              My inbox is always open — I&apos;ll get back to you within 24 hours.
             </p>
 
             <div className="space-y-4">
@@ -137,7 +137,7 @@ export default function Contact() {
                     </div>
                     <h3 className="font-display text-xl font-bold text-primary mb-2">Message sent!</h3>
                     <p className="text-secondary text-sm max-w-xs">
-                      Message sent successfully. Thank you for contacting me! I'll get back to you within 24 hours.
+                      Message sent successfully. Thank you for contacting me! I&apos;ll get back to you within 24 hours.
                     </p>
                     <button
                       onClick={() => setStatus('idle')}
@@ -242,7 +242,7 @@ export default function Contact() {
                     </motion.button>
 
                     <p className="text-xs text-muted text-center">
-                      I'll respond within 24 hours. Your info stays private.
+                      I&apos;ll respond within 24 hours. Your info stays private.
                     </p>
                   </motion.form>
                 )}

@@ -57,7 +57,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.h1 variants={item} className="font-display text-5xl sm:text-6xl lg:text-7xl font-black leading-[0.95] mb-6 tracking-tight">
-            <span className="text-primary block">Hello, I'm</span>
+            <span className="text-primary block">Hello, I&apos;m</span>
             <span className="text-gradient block mt-1">Aswin Mohan</span>
           </motion.h1>
 

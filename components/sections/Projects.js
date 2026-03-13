@@ -38,7 +38,7 @@ const projects = [
   {
     title: 'Amibev',
     description: 'This project is an e-commerce website and mobile application developed to sell various electronic and machine spare parts online. The platform includes a centralized Laravel-based Admin Panel to manage products, orders, customers, inventory, and shipping operations. REST APIs were developed to connect the backend with the website and mobile application. The system is integrated with DTDC courier services for order shipment and delivery tracking, enabling efficient order management and logistics',
-    tech: ['Laravel', 'RESTful APIs', 'Node.js', 'PHP', 'MySQL', 'Node.js', 'GIT'],
+    tech: ['Laravel', 'RESTful APIs', 'Node.js', 'PHP', 'MySQL', 'GIT'],
     // github: 'https://github.com/alexmorgan/collab-docs',
     demo: 'https://sneindia.in/',
     featured: false,
@@ -141,7 +141,7 @@ export default function Projects() {
           <span className="font-mono text-sm text-[var(--accent)] mb-2 block">03. projects</span>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <h2 className="font-display text-4xl sm:text-5xl font-black text-primary">
-              Things I've<br />
+              Things I&apos;ve<br />
               <em className="not-italic text-gradient">built</em>
             </h2>
             <a

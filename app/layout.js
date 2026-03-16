@@ -13,7 +13,7 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://portfolio-bay-mu-94.vercel.app',
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://portfolio-bay-mu-94.vercel.app',
     title: 'Aswin Mohan — Full Stack Developer',
     description: 'Full Stack Developer specializing in PHP, Laravel, MySQL and Node.js.',
     siteName: 'Aswin Mohan Portfolio',
@@ -51,7 +51,7 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="canonical" href="https://portfolio-bay-mu-94.vercel.app" />
+        <link rel="canonical" href="https://portfolio-bay-mu-94.vercel.app/" />
       </head>
       <body className="font-body">
         <ThemeProvider>

@@ -2,6 +2,7 @@ import './globals.css'
 import { ThemeProvider } from '@/components/ui/ThemeProvider'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
+import Loader from '@/components/ui/Loader'
 
 export const metadata = {
   title: 'Aswin Mohan — Full Stack Developer',
@@ -54,6 +55,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className="font-body">
         <ThemeProvider>
+          <Loader />
           <Navbar />
           <main id="main-content">
             {children}

@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { FiGithub, FiLinkedin, FiArrowRight, FiDownload } from 'react-icons/fi'
 import { HiCode } from 'react-icons/hi'
+import Image from 'next/image'
 
 const container = {
   hidden: { opacity: 0 },
@@ -122,16 +123,13 @@ export default function Hero() {
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
             >
-              <div className="absolute inset-0 flex items-center justify-center"
-                style={{ background: 'linear-gradient(135deg, var(--accent-soft) 0%, var(--bg-secondary) 100%)' }}>
-                <div className="text-center">
-                  <div className="w-32 h-32 rounded-full mx-auto mb-4 flex items-center justify-center text-5xl font-display font-black text-white accent-gradient shadow-lg">
-                    AM
-                  </div>
-                  <p className="font-display text-xl font-bold text-primary">Aswin Mohan</p>
-                  <p className="text-sm text-muted font-mono mt-1">Full Stack Dev</p>
-                </div>
-              </div>
+              <Image
+                src="/images/profile.png"
+                alt="Aswin Mohan"
+                fill
+                className="object-cover object-top"
+                priority
+              />
             </motion.div>
 
             {/* Floating badges */}

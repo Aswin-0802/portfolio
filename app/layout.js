@@ -13,13 +13,13 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://portfolio-bay-mu-94.vercel.app',
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://aswin-mohan.vercel.app',
     title: 'Aswin Mohan — Full Stack Developer',
     description: 'Full Stack Developer specializing in PHP, Laravel, MySQL and Node.js.',
     siteName: 'Aswin Mohan Portfolio',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Aswin Mohan — Full Stack Developer',
@@ -30,7 +30,7 @@ export const metadata = {
   //   card: 'summary_large_image',
   //   title: 'Aswin Mohan — Full Stack Developer',
   //   description: 'Full Stack Developer specializing in PHP, Laravel, MySQL and Node.js.',
-  //   images: ['/og-image.jpg'],
+  //   images: ['/og-image.png'],
   //   creator: '@alexmorgan',
   // },
   robots: {
@@ -51,7 +51,7 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="canonical" href="https://portfolio-bay-mu-94.vercel.app/" />
+        <link rel="canonical" href="https://aswin-mohan.vercel.app/" />
       </head>
       <body className="font-body">
         <ThemeProvider>
